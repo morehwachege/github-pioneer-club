@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SideBar({ darkMode }) {
+function SideBar({ darkMode, gitUser, setShowGitUser }) {
     const styles = {
         width: '280' + 'px',
         height: '100vh',
@@ -9,8 +9,12 @@ function SideBar({ darkMode }) {
         zIndex: 2
     }
     const colorMode = { color: darkMode ? 'black' : '#f2f2f2' }
-    function handleSearch(e){
-        console.log(e.target.value);
+    function handleSearch(e) {
+        console.log(e.target.value)
+        let filteredUsers = gitUser.filter(user => user.login.includes(e.target.value))
+        // console.log(filteredUsers);
+        setShowGitUser(filteredUsers)
+
     }
     return (
         <div className="d-flex flex-column flex-shrink-0 p-3 d-none d-md-block sticky-top" style={styles}>
@@ -19,8 +23,11 @@ function SideBar({ darkMode }) {
             <ul className="nav nav-pills flex-column mb-auto">
                 <li>
                     <div className="input-group mb-3">
-                        <input type="text" className="form-control" placeholder="here" aria-label="username" aria-describedby="basic-addon2" />
-                        <span className="input-group-text" id="basic-addon2">search</span>
+                        <input type="text" className="form-control"
+                            placeholder="search"
+                            aria-label="username"
+                            aria-describedby="search"
+                            onChange={handleSearch} />
                     </div>
                 </li>
                 <li className="nav-item">
