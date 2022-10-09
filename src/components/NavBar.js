@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { FaSun, FaMoon } from "react-icons/fa";
 import { Button, Container } from 'react-bootstrap';
 import { ThemeContext, themes } from '../contexts/ThemeContext';
 
-function NavBar() {
-    const [darkMode, setDarkMode] = useState(true);
+
+function NavBar({darkMode, setDarkMode}) {
     // console.log(darkMode)
-    
+
     return (
         <Navbar bg={darkMode} expand="lg" >
             <Container>
                 <Navbar.Brand href="#home">
-                <span className={darkMode ? '' : 'white-text'}>Boy-Spyce</span>
+                    <span className={darkMode ? '' : 'white-text'}>Boy-Spyce</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mx-auto">
                         <Nav.Link href="#home" >
-                            
+
                         </Nav.Link>
                         <Nav.Link href="#home" >
                             <span className={darkMode ? '' : 'white-text'}>About</span>

@@ -1,38 +1,39 @@
 import React from 'react'
-const styles = {
-    width: '280' + 'px',
-    height: 100% + ''
-}
 
-function SideBar() {
+function SideBar({ darkMode }) {
+    const styles = {
+        width: '280' + 'px',
+        height: 100 % + '',
+        backgroundColor: darkMode ? '#f2f2f2' : 'black',
+        color: darkMode ? 'black' : 'white'
+    }
     return (
-        <div className="d-flex flex-column flex-shrink-0 p-3 bg-light d-none d-md-block" style={styles}>
+        <div className="d-flex flex-column flex-shrink-0 p-3 d-none d-md-block" style={styles}>
             <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                {/* <span className="fs-4">Sidebar</span> */}
             </a>
             <ul className="nav nav-pills flex-column mb-auto">
                 <li className="nav-item">
-                    <a href="#" className="nav-link active" aria-current="page">
+                    <a href="#" className="nav-link active" aria-current="page" style={{color: darkMode ? '' : 'white-text'}} >
                         Dashboard
                     </a>
                 </li>
                 <li>
-                    <a href="#" className="nav-link link-dark">
+                    <a href="#" className="nav-link" style={{color: darkMode ? 'black' : '#f2f2f2'}} >
                         Users
                     </a>
                 </li>
                 <li>
-                    <a href="#" className="nav-link link-dark">
+                    <a href="#" className="nav-link" style={{color: darkMode ? 'black' : '#f2f2f2'}} >
                         Orders
                     </a>
                 </li>
                 <li>
-                    <a href="#" className="nav-link link-dark">
+                    <a href="#" className="nav-link" style={{color: darkMode ? 'black' : '#f2f2f2'}} >
                         Products
                     </a>
                 </li>
                 <li>
-                    <a href="#" className="nav-link link-dark">
+                    <a href="#" className="nav-link" style={{color: darkMode ? 'black' : '#f2f2f2'}} >
                         Customers
                     </a>
                 </li>
