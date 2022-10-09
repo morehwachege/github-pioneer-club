@@ -11,12 +11,18 @@ function BigContainer() {
             setGitUser(data)
         })
     }, [gitUser])
+    const style = {
+        width: 100 + "%"
+    }
     return (
-        <div className='d-flex justify-content-center align-items-center flex-wrap' style={{width: 100 + "%"}}>
+        <div className='d-flex justify-content-center align-items-center flex-wrap' style={style}>
            {
+            gitUser ? 
             gitUser.map(user => {
                 return <UserCard user={user} key={user.id} />
             })
+            :
+            <h4>No Users Yet Try Refreshing...</h4>
            } 
         </div>
     )
