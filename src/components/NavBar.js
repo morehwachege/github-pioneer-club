@@ -10,7 +10,7 @@ function NavBar({darkMode, setDarkMode}) {
     // console.log(darkMode)
 
     return (
-        <Navbar bg={darkMode} expand="lg" >
+        <Navbar bg={darkMode ? 'light' : 'dark'} expand="lg" sticky="top" >
             <Container>
                 <Navbar.Brand href="#home">
                     <span className={darkMode ? '' : 'white-text'}>Boy-Spyce</span>
