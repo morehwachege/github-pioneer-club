@@ -8,7 +8,7 @@ import { ThemeContext, themes } from '../contexts/ThemeContext';
 function NavBar() {
     const [darkMode, setDarkMode] = useState(true);
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar bg={darkMode} expand="lg">
             <Container>
                 <Navbar.Brand href="#home">Boy-Spyce</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
