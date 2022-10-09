@@ -1,0 +1,14 @@
+{
+    "people":[
+        {
+            "name": "James Mwangi",
+            "age": 21,
+            "location": "Jamaica"
+        },
+        {
+            "name": "Phineas Njenga",
+            "age": 33,
+            "location": "Palestine"
+        }
+    ]
+}
