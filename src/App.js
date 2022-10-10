@@ -45,7 +45,7 @@ function App() {
               <Login darkMode={darkMode} setDarkMode={setDarkMode} />
             } />
             <Route path="/signup" element={
-              <SignUp darkMode={darkMode} setDarkMode={setDarkMode} />
+              <SignUp darkMode={darkMode} setDarkMode={setDarkMode} gitUser={gitUser} />
             } />
 
           </Routes>
