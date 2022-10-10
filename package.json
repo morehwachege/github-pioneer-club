@@ -1,6 +1,7 @@
 {
   "name": "boy-spyce",
   "version": "0.1.0",
+  "homepage": "https://morehwachege.github.io/github-pioneer-club",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
@@ -45,7 +46,9 @@
   },
   "description": "This app is made as a tribute to up and coming Nigerian singer Boy Spyce. Typically just a dashboard application",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  },
   "author": "Muriithi Gakuru",
   "license": "MIT",
   "repository": "https://github.com/morehwachege/boy-spyce"
