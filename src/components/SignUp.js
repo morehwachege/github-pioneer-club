@@ -41,6 +41,7 @@ function SignUp({ darkMode, setDarkMode }) {
             })
         }
 
+        // TODO: set logged in as true, navigate to homepage, set delete, show logged in user
 
     }
     // console.log(currentUsers)
