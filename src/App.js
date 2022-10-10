@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './components/Home';
 import UserDetailedCard from './components/UserDetailedCard';
+import Login from './components/Auth';
+import SignUp from './components/SignUp';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -34,8 +36,14 @@ function App() {
           <Route path="/about" element={
             <About darkMode={darkMode} setDarkMode={setDarkMode} showGitUser={showGitUser} />
           } />
-          <Route path="users/:id" element={
+          <Route path="/users/:id" element={
             <UserDetailedCard darkMode={darkMode} setDarkMode={setDarkMode} gitUser={gitUser} setShowGitUser={setShowGitUser} showGitUser={showGitUser} />
+          } />
+          <Route path="/login" element={
+            <Login darkMode={darkMode} setDarkMode={setDarkMode} />
+          } />
+          <Route path="/signup" element={
+            <SignUp darkMode={darkMode} setDarkMode={setDarkMode} />
           } />
 
         </Routes>

@@ -46,7 +46,7 @@ function UserDetailedCard({ darkMode, setDarkMode, gitUser, setShowGitUser, show
                                     <h5 className="card-title">Username: {user.login}</h5>
                                     <p className="card-text">Followers: {user.followers_url.length}</p>
                                     <p className="card-text">Following: {user.following_url.length}</p>
-                                        <h3>Organizations</h3>
+                                    <h3>Organizations</h3>
                                     <div className='container d-flex justify-content-center align-items-center flex-row flex-wrap'>
                                         {
                                             // fetchOrgs(user.organisations_url)
@@ -55,7 +55,7 @@ function UserDetailedCard({ darkMode, setDarkMode, gitUser, setShowGitUser, show
                                                     // console.log(item)
                                                     return (
                                                         <div key={item.id}>
-                                                            <img className='m-3'  height={100} width={100} src={item.avatar_url} />
+                                                            <img className='m-3' height={100} width={100} src={item.avatar_url} />
                                                             <p>{item.login}</p>
                                                         </div>
                                                     )
@@ -68,7 +68,10 @@ function UserDetailedCard({ darkMode, setDarkMode, gitUser, setShowGitUser, show
                                 </div>
                             </div>
                             :
-                            <p className='text-center'>Loading...</p>
+                            <>
+                                <p className='text-center'>Searching...</p>
+                                <p className='text-center'>In the meantime check if you're on the right path...</p>
+                            </>
                     }
                 </div>
             </div>

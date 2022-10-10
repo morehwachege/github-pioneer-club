@@ -1,14 +1,18 @@
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { FaSun, FaMoon } from "react-icons/fa";
-import { Button, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { ThemeContext, themes } from '../contexts/ThemeContext';
 import { NavLink } from 'react-router-dom';
+import ButtonMode from './ButtonMode';
 
 
 function NavBar({ darkMode, setDarkMode }) {
     // console.log(darkMode)
+    // function handleModeChange() {
+    //     setDarkMode(!darkMode);
+    //     changeTheme(darkMode ? themes.light : themes.dark);
+    // }
 
     return (
         <Navbar bg={darkMode ? 'light' : 'dark'} expand="lg" sticky="top" >
@@ -32,16 +36,10 @@ function NavBar({ darkMode, setDarkMode }) {
                     </Nav>
                     <ThemeContext.Consumer>
                         {({ changeTheme }) => (
-                            <Button
-                                color="link"
-                                className='btn-warning ml-auto'
-                                onClick={() => {
-                                    setDarkMode(!darkMode);
-                                    changeTheme(darkMode ? themes.light : themes.dark);
-                                }}
-                            >
-                                <span>Switch mode {darkMode ? <FaSun /> : <FaMoon />}</span>
-                            </Button>
+                            <ButtonMode handleModeChange={() => {
+                                setDarkMode(!darkMode);
+                                changeTheme(darkMode ? themes.light : themes.dark);
+                            }} darkMode={darkMode} />
                         )}
                     </ThemeContext.Consumer>
                 </Navbar.Collapse>
