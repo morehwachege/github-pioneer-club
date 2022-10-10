@@ -34,26 +34,11 @@ function SideBar({ darkMode, gitUser, setShowGitUser }) {
                         All Users
                     </a>
                 </li>
-                <li>
+                {/* <li>
                     <a href="#" className="nav-link" style={colorMode} >
                         User
                     </a>
-                </li>
-                <li>
-                    <a href="#" className="nav-link" style={colorMode} >
-                        Orders
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className="nav-link" style={colorMode} >
-                        Products
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className="nav-link" style={colorMode} >
-                        Customers
-                    </a>
-                </li>
+                </li> */}
             </ul>
         </div>
     )

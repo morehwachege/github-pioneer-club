@@ -1,9 +1,7 @@
-import React, {useEffect, useState} from 'react';
 import UserCard from './UserCard';
 
 
-function BigContainer({darkMode, showGitUser}) {
-    
+function BigContainer({darkMode, showGitUser}) {    
     const style = {
         width: 100 + "%"
     }

@@ -1,13 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './components/NavBar';
-import SideBar from './components/SideBar';
 import About from './components/About';
-import BigContainer from './components/BigContainer';
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './components/Home';
+import UserDetailedCard from './components/UserDetailedCard';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -29,10 +26,17 @@ function App() {
   return (
     <Router>
       <div className="App">
-        
+
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route exact path="/" element={
+            <Home darkMode={darkMode} setDarkMode={setDarkMode} setGitUser={setGitUser} gitUser={gitUser} setShowGitUser={setShowGitUser} showGitUser={showGitUser} />
+          } />
+          <Route path="/about" element={
+            <About darkMode={darkMode} setDarkMode={setDarkMode} showGitUser={showGitUser} />
+          } />
+          <Route path="users/:id" element={
+            <UserDetailedCard darkMode={darkMode} setDarkMode={setDarkMode} gitUser={gitUser} setShowGitUser={setShowGitUser} showGitUser={showGitUser} />
+          } />
 
         </Routes>
 

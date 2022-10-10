@@ -3,10 +3,7 @@ import SideBar from './SideBar';
 import BigContainer from './BigContainer';
 import { useEffect, useState } from 'react';
 
-function Home() {
-    const [darkMode, setDarkMode] = useState(true);
-    const [gitUser, setGitUser] = useState([]);
-    const [showGitUser, setShowGitUser] = useState([])
+function Home({ darkMode, setDarkMode, gitUser, setGitUser, showGitUser, setShowGitUser}) {
 
     useEffect(() => {
         fetch("https://api.github.com/users")

@@ -19,21 +19,16 @@ function NavBar({ darkMode, setDarkMode }) {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mx-auto">
-                        <Nav.Link>
-                            <NavLink exact to='/about' >
-                                <span className={darkMode ? '' : 'white-text'}>About</span>
-                            </NavLink>
-                        </Nav.Link>
-                        <Nav.Link>
-                            <NavLink exact to='/contact' >
-                                <span className={darkMode ? '' : 'white-text'}>Contact</span>
-                            </NavLink>
-                        </Nav.Link>
-                        <Nav.Link>
-                            <NavLink exact to='/FAQs' >
-                                <span className={darkMode ? '' : 'white-text'}>FAQs</span>
-                            </NavLink>
-                        </Nav.Link>
+                        <NavLink to='/' className='m-2' >
+                            <span className={darkMode ? '' : 'white-text'}>Home</span>
+                        </NavLink>
+
+                        <NavLink to='/about' className='m-2'>
+                            <span className={darkMode ? '' : 'white-text'}>About</span>
+                        </NavLink>
+                        <NavLink to='/contact' className='m-2'>
+                            <span className={darkMode ? '' : 'white-text'}>Contact</span>
+                        </NavLink>
                     </Nav>
                     <ThemeContext.Consumer>
                         {({ changeTheme }) => (
