@@ -24,10 +24,10 @@ function UserDetailedCard({ darkMode, setDarkMode, gitUser, setShowGitUser, show
             <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
             <div className='d-flex' style={style} >
                 <SideBar darkMode={darkMode} gitUser={gitUser} setShowGitUser={setShowGitUser} />
-                <div className='d-flex justify-content-center align-items-center flex-wrap flex-column' style={style}>
+                <div className='d-flex justify-content-between align-items-center flex-wrap flex-column' style={style}>
                     {
                         user ?
-                            <>
+                            <div className='container d-flex justify-content-center align-items-center p-3'>
                                 <div className="card m-3" style={{ width: 24 + 'rem', background: darkMode ? 'white' : 'black' }}>
                                     <img className="card-img-top" src={user.avatar_url} alt={`${user.login}'s github avatar`} />
 
@@ -37,7 +37,7 @@ function UserDetailedCard({ darkMode, setDarkMode, gitUser, setShowGitUser, show
                                         <a href={user.html_url} className="btn btn-warning">See full profile</a>
                                     </div>
                                 </div>
-                                <div className="card-body d-flex justify-content-center align-items-center flex-column">
+                                <div className="card-body d-flex justify-content-center align-items-center flex-column flex-wrap">
                                     <h2 className="card-title">Profiles</h2>
                                     <a href={user.html_url}>
                                         <p className='text-center d-flex justify-content-center align-items-center' style={{ fontSize: 20 + "px" }}>
@@ -66,7 +66,7 @@ function UserDetailedCard({ darkMode, setDarkMode, gitUser, setShowGitUser, show
                                         }
                                     </div>
                                 </div>
-                            </>
+                            </div>
                             :
                             <p className='text-center'>Loading...</p>
                     }

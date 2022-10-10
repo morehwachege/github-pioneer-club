@@ -14,7 +14,7 @@ function NavBar({ darkMode, setDarkMode }) {
         <Navbar bg={darkMode ? 'light' : 'dark'} expand="lg" sticky="top" >
             <Container>
                 <Navbar.Brand href="#home">
-                    <span className={darkMode ? '' : 'white-text'}>Boy-Spyce</span>
+                    <span className={darkMode ? '' : 'white-text'}>GitHub Pioneer Club</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -26,9 +26,9 @@ function NavBar({ darkMode, setDarkMode }) {
                         <NavLink to='/about' className='m-2'>
                             <span className={darkMode ? '' : 'white-text'}>About</span>
                         </NavLink>
-                        <NavLink to='/contact' className='m-2'>
+                        {/* <NavLink to='/contact' className='m-2'>
                             <span className={darkMode ? '' : 'white-text'}>Contact</span>
-                        </NavLink>
+                        </NavLink> */}
                     </Nav>
                     <ThemeContext.Consumer>
                         {({ changeTheme }) => (
