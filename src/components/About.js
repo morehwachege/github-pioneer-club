@@ -1,6 +1,5 @@
-import React from 'react'
-import NavBar from './NavBar'
-import BigContainer from './BigContainer'
+import React from 'react';
+import NavBar from './NavBar';
 
 function About({ darkMode, setDarkMode, showGitUser }) {
     return (

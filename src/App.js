@@ -19,10 +19,10 @@ function App() {
         setShowGitUser(data)
       })
   }, [])
-  const style = {
-    width: 100 + "%",
-    height: 'auto'
-  }
+  // const style = {
+  //   width: 100 + "%",
+  //   height: 'auto'
+  // }
   return (
     <Router>
       <div className="App">
