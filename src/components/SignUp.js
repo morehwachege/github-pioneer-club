@@ -1,31 +1,55 @@
-import React from 'react';
+import React, {useContext, useEffect, useState } from 'react';
 import Auth from './Auth';
 import { Link, useNavigate } from 'react-router-dom';
+import {UserContext} from '../contexts/UserContext';
 // import {Link} from 
 
 function SignUp({ darkMode, setDarkMode }) {
-    const navigate = useNavigate()
+    const [isLoggedIn, setIsLoggedIn] = useContext(UserContext);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+
+    function handleSignUp(e){
+        e.preventDefault();
+        const signUpDetails = {
+            "email": email,
+            "password": password
+        }
+        console.log(signUpDetails);
+    }
+
     return (
         <>
             <Auth darkMode={darkMode} setDarkMode={setDarkMode} />
-            <div className='container d-flex justify-content-center align-items-start login p-2 flex-column flex-wrap'>
-                <form className='form-login'>
+            <h4 className='text-center'>GitHub Pioneers' Club</h4>
+            <div className='container d-flex justify-content-center align-items-start login flex-column flex-wrap'>
+                <form className='form-login' method='POST'>
                     <h3 className='pb-4'>Sign Up</h3>
                     <div className="form-group">
-                        <label for="exampleInputEmail1" className='pb-2'>Email address</label>
-                        <input type="email" className="form-control" style={{ width: 500 + "px" }} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                        <label htmlFor="email1" className='pb-2'>Email address</label>
+                        <input type="email" className="form-control" style={{ width: 500 + "px" }} id="email1" 
+                        aria-describedby="emailHelp" 
+                        placeholder="Enter email"
+                        name='email'
+                        onChange={e => setEmail(e.target.value)}
+                         />
                         <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
                     <div className="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+                        <label htmlFor="password1">Password</label>
+                        <input type="password" className="form-control" id="password1" 
+                        placeholder="Password" 
+                        name="password"
+                        onChange={e => setPassword(e.target.value)}
+                        />
                     </div>
                     <p className='m-3'>Already have an account?
                         <Link to="/login" className='p-2 text-warning'>
                         Login here
                         </Link>
                     </p>
-                    <button type="submit" className="btn btn-warning mt-4" style={{ width: 100 + "px" }}>Login</button>
+                    <button type="submit" className="btn btn-warning mt-4" style={{ width: 100 + "px" }} onClick={handleSignUp}>Sign Up</button>
                 </form>
             </div>
         </>
