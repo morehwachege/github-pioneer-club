@@ -9,10 +9,9 @@ function SideBar({ darkMode, gitUser, setShowGitUser }) {
         zIndex: 2
     }
     const colorMode = { color: darkMode ? 'black' : '#f2f2f2' }
+
     function handleSearch(e) {
-        console.log(e.target.value)
         let filteredUsers = gitUser.filter(user => user.login.includes(e.target.value))
-        // console.log(filteredUsers);
         setShowGitUser(filteredUsers)
 
     }
@@ -32,12 +31,12 @@ function SideBar({ darkMode, gitUser, setShowGitUser }) {
                 </li>
                 <li className="nav-item">
                     <a href="#" className="nav-link active" aria-current="page" style={colorMode} >
-                        Dashboard
+                        All Users
                     </a>
                 </li>
                 <li>
                     <a href="#" className="nav-link" style={colorMode} >
-                        Users
+                        User
                     </a>
                 </li>
                 <li>
