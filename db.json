@@ -1,3 +1,19 @@
 {
-  "users": []
+  "users": [
+    {
+      "id": 1,
+      "email": "jamescorden@gmail.com",
+      "password": "hackme"
+    },
+    {
+      "id": 2,
+      "email": "someonestolemypassword@gmail.com",
+      "password": "dumbass22"
+    },
+    {
+      "id": 3,
+      "email": "antony123muriithi@gmail.com",
+      "password": "moreh"
+    }
+  ]
 }
