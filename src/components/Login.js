@@ -1,30 +1,35 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Auth from './Auth';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../contexts/UserContext';
 
 
 
-function Login({ darkMode, setDarkMode, setIsLoggedIn }) {
+function Login({ darkMode, setDarkMode, setIsLoggedIn, isLoggedIn }) {
     const message = useContext(UserContext);
+    const navigate = useNavigate()
     // console.log(message);
+    const [errorMessage, setErrorMessage] = useState(false)
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     function handleLogin(e) {
         e.preventDefault();
-        const loginData = {
-            "email": email,
-            "password": password
-        }
+        
         fetch("http://localhost:4000/users")
-        .then(res => res.json())
-        .then(data => {
-            // returns undefined if no users found
-            const users = data.find(user => user.email === email && user.password === password)
-            // console.log(!users  ? 'user is undefined' : users)
-        })
+            .then(res => res.json())
+            .then(data => {
+                // returns undefined if no users found
+                const users = data.find(user => user.email === email && user.password === password)
+                return !users ? setIsLoggedIn(false) : setIsLoggedIn(true)
+            })
     }
+    useEffect(() => {
+        if (isLoggedIn){
+            navigate("/")
+        }
+    }, [isLoggedIn])
+    
 
     return (
         <>
@@ -33,6 +38,7 @@ function Login({ darkMode, setDarkMode, setIsLoggedIn }) {
                 <form className='form-login' method='POST'>
                     <h3 className='pb-4'>Login</h3>
                     <div className="form-group">
+                        
                         <label htmlFor="email1" className='pb-2'>Email address</label>
                         <input type="email" className="form-control" style={{ width: 500 + "px" }} name='email' id="email1"
                             aria-describedby="emailHelp"
