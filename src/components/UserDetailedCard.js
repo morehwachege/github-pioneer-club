@@ -61,7 +61,6 @@ function UserDetailedCard({ darkMode, setDarkMode, gitUser, setShowGitUser, show
                                             // fetchOrgs(user.organisations_url)
                                             orgs ?
                                                 orgs.map(item => {
-                                                    // console.log(item)
                                                     return (
                                                         <div key={item.id}>
                                                             <img className='m-3' height={100} width={100} src={item.avatar_url} />

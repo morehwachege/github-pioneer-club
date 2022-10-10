@@ -18,8 +18,13 @@ function Login({ darkMode, setDarkMode, setLoggedInUser}) {
             .then(res => res.json())
             .then(data => {
                 // returns undefined if no users found
-                const users = data.find(user => user.email === email && user.password === password)
-                return !users ? setIsLoggedIn(false) : setIsLoggedIn(true)
+                const users = data.find(user => user.email === email && user.password === password);
+                if(!users){
+                    return setIsLoggedIn(false);
+                }else{
+                    setLoggedInUser(users)
+                    return setIsLoggedIn(true)
+                }
             })
     }
     useEffect(() => {

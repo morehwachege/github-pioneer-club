@@ -1,7 +1,6 @@
 import React from 'react'
 
-
-function SideBar({ darkMode, gitUser, setShowGitUser, setIsLoggedIn }) {
+function SideBar({ darkMode, gitUser, setShowGitUser, setIsLoggedIn, loggedInUser }) {
     const styles = {
         width: '280' + 'px',
         height: '100vh',
@@ -18,6 +17,22 @@ function SideBar({ darkMode, gitUser, setShowGitUser, setIsLoggedIn }) {
 
     function handleLogOut() {
         setIsLoggedIn(false)
+    }
+
+    function handleDelete() {
+        // set currently authenticated and groom to delete
+        fetch(`http://localhost:4000/users/${loggedInUser.id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "applicationjson"
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                alert("Woops! What did you do?!")
+                setIsLoggedIn(false)
+            })
     }
 
     return (
@@ -50,7 +65,8 @@ function SideBar({ darkMode, gitUser, setShowGitUser, setIsLoggedIn }) {
                 </li>
 
                 <li className='me-mb-auto pt-5 mt-5'>
-                    <a className="nav-link active bg-danger text-dark text-center mt-2" aria-current="page" style={colorMode} >
+                    <a className="nav-link active bg-danger text-dark text-center mt-2" aria-current="page" style={colorMode}
+                        onClick={handleDelete} >
                         Delete Account
                     </a>
                 </li>

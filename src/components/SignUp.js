@@ -2,9 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import Auth from './Auth';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../contexts/UserContext';
-// import {Link} from 
 
-function SignUp({ darkMode, setDarkMode }) {
+function SignUp({ darkMode, setDarkMode, setLoggedInUser }) {
     const [isLoggedIn, setIsLoggedIn] = useContext(UserContext);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -24,7 +23,6 @@ function SignUp({ darkMode, setDarkMode }) {
         }
 
         const filteredData = currentUsers.find(user => user.email === postData.email);
-        console.log(filteredData ? "Something came" : "nothing came back")
         if (!filteredData) {
             // only post if there is no such data in the server
             fetch("http://localhost:4000/users", {
@@ -37,8 +35,8 @@ function SignUp({ darkMode, setDarkMode }) {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
                     setIsLoggedIn(true)
+                    setLoggedInUser(data)
                 })
         }
         // TODO: set logged in as true, navigate to homepage, set delete
@@ -48,7 +46,6 @@ function SignUp({ darkMode, setDarkMode }) {
             navigate("/")
         }
     }, [isLoggedIn])
-    // console.log(currentUsers)
     return (
         <>
             <Auth darkMode={darkMode} setDarkMode={setDarkMode} />

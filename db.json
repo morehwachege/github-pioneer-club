@@ -11,14 +11,19 @@
       "password": "dumbpass22"
     },
     {
-      "id": 3,
-      "email": "antony123muriithi@gmail.com",
-      "password": "moreh"
+      "email": "doctor@demo.com",
+      "password": "doctor",
+      "id": 5
     },
     {
-      "email": "jamesmaina@gmail.com",
-      "password": "maina",
-      "id": 4
+      "email": "cleopatrahot@outlook.com",
+      "password": "cleo",
+      "id": 6
+    },
+    {
+      "email": "maria12geneva@yahoo.com",
+      "password": "geneva",
+      "id": 7
     }
   ]
 }
