@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import NavBar from './NavBar';
 import SideBar from './SideBar';
-import { FaGithub, FaFacebookF } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { UserContext } from '../contexts/UserContext';
+
 
 function UserDetailedCard({ darkMode, setDarkMode, gitUser, setShowGitUser, showGitUser }) {
+    const [isLoggedIn, setIsLoggedIn] = useContext(UserContext);
+    const navigate = useNavigate();
     const [orgs, setOrgs] = useState([])
     let { id } = useParams();
     const style = {
@@ -17,13 +21,18 @@ function UserDetailedCard({ darkMode, setDarkMode, gitUser, setShowGitUser, show
             .then(data => {
                 setOrgs(data)
             })
-    }, [])
+    }, []);
+
+    useEffect(() => {
+        if (!isLoggedIn) navigate("/login")
+
+    }, [isLoggedIn])
 
     return (
         <>
             <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
             <div className='d-flex' style={style} >
-                <SideBar darkMode={darkMode} gitUser={gitUser} setShowGitUser={setShowGitUser} />
+                <SideBar darkMode={darkMode} gitUser={gitUser} setShowGitUser={setShowGitUser} setIsLoggedIn={setIsLoggedIn} />
                 <div className='d-flex justify-content-between align-items-center flex-wrap flex-column' style={style}>
                     {
                         user ?

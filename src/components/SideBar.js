@@ -1,6 +1,7 @@
 import React from 'react'
 
-function SideBar({ darkMode, gitUser, setShowGitUser }) {
+
+function SideBar({ darkMode, gitUser, setShowGitUser, setIsLoggedIn }) {
     const styles = {
         width: '280' + 'px',
         height: '100vh',
@@ -13,8 +14,12 @@ function SideBar({ darkMode, gitUser, setShowGitUser }) {
     function handleSearch(e) {
         let filteredUsers = gitUser.filter(user => user.login.includes(e.target.value))
         setShowGitUser(filteredUsers)
-
     }
+
+    function handleLogOut(){
+        setIsLoggedIn(false)
+    }
+
     return (
         <div className="d-flex flex-column flex-shrink-0 p-3 d-none d-md-block sticky-top" style={styles}>
             <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
@@ -34,6 +39,12 @@ function SideBar({ darkMode, gitUser, setShowGitUser }) {
                         All Users
                     </a>
                 </li>
+                <li className="nav-item" onClick={handleLogOut}>
+                    <a href="#" className="nav-link active bg-danger text-dark text-center mt-2" aria-current="page" style={colorMode} >
+                        Logout
+                    </a>
+                </li>
+                
                 {/* <li>
                     <a href="#" className="nav-link" style={colorMode} >
                         User

@@ -28,11 +28,12 @@ function App() {
     <Router>
       <div className="App">
 
-        <UserContext.Provider value="I am amazing!">
+        <UserContext.Provider value={[isLoggedIn, setIsLoggedIn]}>
           <Routes>
             {/* user context */}
             <Route exact path="/" element={
-              <Home darkMode={darkMode} setDarkMode={setDarkMode} setGitUser={setGitUser} gitUser={gitUser} setShowGitUser={setShowGitUser} showGitUser={showGitUser} />
+              <Home darkMode={darkMode} setDarkMode={setDarkMode} setGitUser={setGitUser} gitUser={gitUser} setShowGitUser={setShowGitUser} showGitUser={showGitUser}
+              setIsLoggedIn={setIsLoggedIn} />
             } />
             <Route path="/about" element={
               <About darkMode={darkMode} setDarkMode={setDarkMode} showGitUser={showGitUser} />
@@ -41,7 +42,7 @@ function App() {
               <UserDetailedCard darkMode={darkMode} setDarkMode={setDarkMode} gitUser={gitUser} setShowGitUser={setShowGitUser} showGitUser={showGitUser} />
             } />
             <Route path="/login" element={
-              <Login darkMode={darkMode} setDarkMode={setDarkMode} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+              <Login darkMode={darkMode} setDarkMode={setDarkMode} />
             } />
             <Route path="/signup" element={
               <SignUp darkMode={darkMode} setDarkMode={setDarkMode} />

@@ -5,17 +5,15 @@ import { UserContext } from '../contexts/UserContext';
 
 
 
-function Login({ darkMode, setDarkMode, setIsLoggedIn, isLoggedIn }) {
-    const message = useContext(UserContext);
-    const navigate = useNavigate()
-    // console.log(message);
-    const [errorMessage, setErrorMessage] = useState(false)
+function Login({ darkMode, setDarkMode}) {
+    const [isLoggedIn, setIsLoggedIn] = useContext(UserContext);
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     function handleLogin(e) {
         e.preventDefault();
-        
+
         fetch("http://localhost:4000/users")
             .then(res => res.json())
             .then(data => {
@@ -25,11 +23,11 @@ function Login({ darkMode, setDarkMode, setIsLoggedIn, isLoggedIn }) {
             })
     }
     useEffect(() => {
-        if (isLoggedIn){
+        if (isLoggedIn) {
             navigate("/")
         }
     }, [isLoggedIn])
-    
+
 
     return (
         <>
@@ -38,7 +36,7 @@ function Login({ darkMode, setDarkMode, setIsLoggedIn, isLoggedIn }) {
                 <form className='form-login' method='POST'>
                     <h3 className='pb-4'>Login</h3>
                     <div className="form-group">
-                        
+
                         <label htmlFor="email1" className='pb-2'>Email address</label>
                         <input type="email" className="form-control" style={{ width: 500 + "px" }} name='email' id="email1"
                             aria-describedby="emailHelp"
