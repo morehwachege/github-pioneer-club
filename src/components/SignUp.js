@@ -35,15 +35,19 @@ function SignUp({ darkMode, setDarkMode }) {
                 },
                 body: JSON.stringify(postData)
             })
-            .then(res => res.json())
-            .then( data => {
-                console.log(data)
-            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    setIsLoggedIn(true)
+                })
         }
-
-        // TODO: set logged in as true, navigate to homepage, set delete, show logged in user
-
+        // TODO: set logged in as true, navigate to homepage, set delete
     }
+    useEffect(() => {
+        if (isLoggedIn) {
+            navigate("/")
+        }
+    }, [isLoggedIn])
     // console.log(currentUsers)
     return (
         <>

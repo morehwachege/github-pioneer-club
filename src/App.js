@@ -13,7 +13,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [gitUser, setGitUser] = useState([]);
   const [showGitUser, setShowGitUser] = useState([]);
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     fetch("https://api.github.com/users")
@@ -42,10 +42,10 @@ function App() {
               <UserDetailedCard darkMode={darkMode} setDarkMode={setDarkMode} gitUser={gitUser} setShowGitUser={setShowGitUser} showGitUser={showGitUser} />
             } />
             <Route path="/login" element={
-              <Login darkMode={darkMode} setDarkMode={setDarkMode} />
+              <Login darkMode={darkMode} setDarkMode={setDarkMode}  />
             } />
             <Route path="/signup" element={
-              <SignUp darkMode={darkMode} setDarkMode={setDarkMode} gitUser={gitUser} />
+              <SignUp darkMode={darkMode} setDarkMode={setDarkMode} gitUser={gitUser}  />
             } />
 
           </Routes>

@@ -16,7 +16,7 @@ function SideBar({ darkMode, gitUser, setShowGitUser, setIsLoggedIn }) {
         setShowGitUser(filteredUsers)
     }
 
-    function handleLogOut(){
+    function handleLogOut() {
         setIsLoggedIn(false)
     }
 
@@ -25,7 +25,11 @@ function SideBar({ darkMode, gitUser, setShowGitUser, setIsLoggedIn }) {
             <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
             </a>
             <ul className="nav nav-pills flex-column mb-auto">
-                <li>
+                <li className=' d-fex justify-content-center align-items-center flex-column'>
+                    <img style={{}} src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Circle-icons-profile.svg" height={80} width={80} alt="profile thumbnail" className="img-thumbnail rounded" />
+                    <h6>Software Developer</h6>
+                </li>
+                <li className='nav-item'>
                     <div className="input-group mb-3">
                         <input type="text" className="form-control"
                             placeholder="search"
@@ -40,16 +44,16 @@ function SideBar({ darkMode, gitUser, setShowGitUser, setIsLoggedIn }) {
                     </a>
                 </li>
                 <li className="nav-item" onClick={handleLogOut}>
-                    <a href="#" className="nav-link active bg-danger text-dark text-center mt-2" aria-current="page" style={colorMode} >
+                    <a href="#" className="nav-link active bg-secondary text-dark text-center mt-2" aria-current="page" style={colorMode} >
                         Logout
                     </a>
                 </li>
-                
-                {/* <li>
-                    <a href="#" className="nav-link" style={colorMode} >
-                        User
+
+                <li style={{ bottom: 0 }} className='me-mb-auto pt-5 mt-5'>
+                    <a href="#" className="nav-link active bg-danger text-dark text-center mt-2" aria-current="page" style={colorMode} >
+                        Delete Account
                     </a>
-                </li> */}
+                </li>
             </ul>
         </div>
     )

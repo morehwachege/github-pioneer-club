@@ -5,7 +5,7 @@ import { UserContext } from '../contexts/UserContext';
 
 
 
-function Login({ darkMode, setDarkMode}) {
+function Login({ darkMode, setDarkMode, setLoggedInUser}) {
     const [isLoggedIn, setIsLoggedIn] = useContext(UserContext);
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
