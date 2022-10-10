@@ -7,7 +7,7 @@ function About({ darkMode, setDarkMode, showGitUser }) {
         <div>
             <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
             <div className='container' >
-                <h3 className='text-center mt-5'>About Us</h3>
+                <h3 className='text-center mt-5 text-warning'>About Us</h3>
                 <div className='container d-flex justify-content-center align-items-center flex-column p-5'>
                 <p className=''>This application utilizes the GitHub api showing the co-founders of the company alongside some
                 of its earliest members. You can filter through the list as well as select individual persons as well.</p>

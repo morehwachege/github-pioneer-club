@@ -4,16 +4,11 @@ import NavBar from './NavBar';
 import SideBar from './SideBar';
 
 function UserDetailedCard({ darkMode, setDarkMode, gitUser, setShowGitUser, showGitUser }) {
-    // <SideBar darkMode={darkMode} gitUser={gitUser} setShowGitUser={setShowGitUser} />
     let { id } = useParams();
     const style = {
         width: 100 + "%"
     }
-    function getFiltered() {
-        return new Promise(Resolve => {
-            Resolve(showGitUser.find(user => user.id === Number(id)))
-        })
-    }
+    
     const user = showGitUser.find(user => user.id === Number(id));
     return (
         <>
@@ -21,7 +16,6 @@ function UserDetailedCard({ darkMode, setDarkMode, gitUser, setShowGitUser, show
             <div className='d-flex' style={style} >
                 <SideBar darkMode={darkMode} gitUser={gitUser} setShowGitUser={setShowGitUser} />
                 <div className='d-flex justify-content-center align-items-center flex-wrap' style={style}>
-
                     {
                         user ?
                             <div className="card m-3" style={{ width: 24 + 'rem', background: darkMode ? 'white' : 'black' }}>
@@ -36,10 +30,8 @@ function UserDetailedCard({ darkMode, setDarkMode, gitUser, setShowGitUser, show
                             :
                             <p className='text-center'>Loading...</p>
                     }
-
                 </div>
             </div>
-            {/* <p>{user ? user.login : undefined}</p> */}
         </>
     )
 }
