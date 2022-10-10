@@ -39,18 +39,18 @@ function SideBar({ darkMode, gitUser, setShowGitUser, setIsLoggedIn }) {
                     </div>
                 </li>
                 <li className="nav-item">
-                    <a href="#" className="nav-link active bg-warning text-dark" aria-current="page" style={colorMode} >
+                    <a className="nav-link active bg-warning text-dark" aria-current="page" style={colorMode} >
                         All Users
                     </a>
                 </li>
                 <li className="nav-item" onClick={handleLogOut}>
-                    <a href="#" className="nav-link active bg-secondary text-dark text-center mt-2" aria-current="page" style={colorMode} >
+                    <a className="nav-link active bg-secondary text-dark text-center mt-2" aria-current="page" style={colorMode} >
                         Logout
                     </a>
                 </li>
 
-                <li style={{ bottom: 0 }} className='me-mb-auto pt-5 mt-5'>
-                    <a href="#" className="nav-link active bg-danger text-dark text-center mt-2" aria-current="page" style={colorMode} >
+                <li className='me-mb-auto pt-5 mt-5'>
+                    <a className="nav-link active bg-danger text-dark text-center mt-2" aria-current="page" style={colorMode} >
                         Delete Account
                     </a>
                 </li>
