@@ -32,7 +32,8 @@ function Login({ darkMode, setDarkMode}) {
     return (
         <>
             <Auth darkMode={darkMode} setDarkMode={setDarkMode} />
-            <div className='container d-flex justify-content-center align-items-start login p-2 flex-column flex-wrap'>
+            <h4 className='text-center'>GitHub Pioneers' Club</h4>
+            <div className='container d-flex justify-content-center align-items-start login flex-column flex-wrap'>
                 <form className='form-login' method='POST'>
                     <h3 className='pb-4'>Login</h3>
                     <div className="form-group">
@@ -41,6 +42,7 @@ function Login({ darkMode, setDarkMode}) {
                         <input type="email" className="form-control" style={{ width: 500 + "px" }} name='email' id="email1"
                             aria-describedby="emailHelp"
                             placeholder="Enter email"
+                            required
                             onChange={e => setEmail(e.target.value)}
                         />
                         <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
@@ -50,6 +52,7 @@ function Login({ darkMode, setDarkMode}) {
                         <input type="password" className="form-control"
                             id="Password1" placeholder="Password"
                             name='password'
+                            required
                             onChange={(e) => setPassword(e.target.value)}
                         />
                     </div>

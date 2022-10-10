@@ -22,6 +22,11 @@ For support, email muriithigakuru@gmail.com or join our Slack channel.
 - Globalization of state using context
 - Pushing to different navigations using the useNavigate hook.
 
+### Default Credentials or Create Account
+- email - someonestolemypassword@email.com
+- password - dumbpass22
+
+
 
 
 ## 🔗 Links
