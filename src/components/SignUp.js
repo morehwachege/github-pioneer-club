@@ -47,7 +47,7 @@ function SignUp({ darkMode, setDarkMode }) {
     return (
         <>
             <Auth darkMode={darkMode} setDarkMode={setDarkMode} />
-            <h4 className='text-center'>GitHub Pioneers' Club</h4>
+            <h4 className='text-center'>GitHub Pioneers Club</h4>
             <div className='container d-flex justify-content-center align-items-start login flex-column flex-wrap'>
                 <form className='form-login' method='POST'>
                     <h3 className='pb-4'>Sign Up</h3>

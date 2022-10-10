@@ -32,7 +32,7 @@ function Login({ darkMode, setDarkMode}) {
     return (
         <>
             <Auth darkMode={darkMode} setDarkMode={setDarkMode} />
-            <h4 className='text-center'>GitHub Pioneers' Club</h4>
+            <h4 className='text-center'>GitHub Pioneers Club</h4>
             <div className='container d-flex justify-content-center align-items-start login flex-column flex-wrap'>
                 <form className='form-login' method='POST'>
                     <h3 className='pb-4'>Login</h3>
@@ -45,7 +45,7 @@ function Login({ darkMode, setDarkMode}) {
                             required
                             onChange={e => setEmail(e.target.value)}
                         />
-                        <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <small id="emailHelp" className="form-text text-muted">Thanks for coming back! Welcome.</small>
                     </div>
                     <div className="form-group">
                         <label htmlFor="Password1">Password</label>
