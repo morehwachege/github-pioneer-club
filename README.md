@@ -1,5 +1,5 @@
 
-# Vintage GitHub
+# GitHub Pioneer Club
 
 Display some og GitHub's earliest users including the co-founders. Shows a detailed view of their current profiles including the organizations that they are currently in.
 
