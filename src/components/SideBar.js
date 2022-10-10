@@ -30,7 +30,7 @@ function SideBar({ darkMode, gitUser, setShowGitUser }) {
                     </div>
                 </li>
                 <li className="nav-item">
-                    <a href="#" className="nav-link active" aria-current="page" style={colorMode} >
+                    <a href="#" className="nav-link active bg-warning text-dark" aria-current="page" style={colorMode} >
                         All Users
                     </a>
                 </li>
