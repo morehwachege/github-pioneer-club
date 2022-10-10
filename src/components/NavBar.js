@@ -4,9 +4,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import { FaSun, FaMoon } from "react-icons/fa";
 import { Button, Container } from 'react-bootstrap';
 import { ThemeContext, themes } from '../contexts/ThemeContext';
+import { NavLink } from 'react-router-dom';
 
 
-function NavBar({darkMode, setDarkMode}) {
+function NavBar({ darkMode, setDarkMode }) {
     // console.log(darkMode)
 
     return (
@@ -18,17 +19,20 @@ function NavBar({darkMode, setDarkMode}) {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mx-auto">
-                        <Nav.Link href="#home" >
-
+                        <Nav.Link>
+                            <NavLink exact to='/about' >
+                                <span className={darkMode ? '' : 'white-text'}>About</span>
+                            </NavLink>
                         </Nav.Link>
-                        <Nav.Link href="#home" >
-                            <span className={darkMode ? '' : 'white-text'}>About</span>
+                        <Nav.Link>
+                            <NavLink exact to='/contact' >
+                                <span className={darkMode ? '' : 'white-text'}>Contact</span>
+                            </NavLink>
                         </Nav.Link>
-                        <Nav.Link href="#home" >
-                            <span className={darkMode ? '' : 'white-text'}>Contact</span>
-                        </Nav.Link>
-                        <Nav.Link href="#home" >
-                            <span className={darkMode ? '' : 'white-text'}>FAQs</span>
+                        <Nav.Link>
+                            <NavLink exact to='/FAQs' >
+                                <span className={darkMode ? '' : 'white-text'}>FAQs</span>
+                            </NavLink>
                         </Nav.Link>
                     </Nav>
                     <ThemeContext.Consumer>
