@@ -39,6 +39,11 @@
       "email": "jamesmaina@gmail.com",
       "password": "maina",
       "id": 10
+    },
+    {
+      "email": "antony123muriithi@gmail.com",
+      "password": "moreh",
+      "id": 11
     }
   ]
 }
