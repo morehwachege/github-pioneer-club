@@ -4,56 +4,6 @@
       "id": 1,
       "email": "jamescorden@gmail.com",
       "password": "hackme"
-    },
-    {
-      "id": 2,
-      "email": "someonestolemypassword@email.com",
-      "password": "dumbpass22"
-    },
-    {
-      "email": "doctor@demo.com",
-      "password": "doctor",
-      "id": 5
-    },
-    {
-      "email": "cleopatrahot@outlook.com",
-      "password": "cleo",
-      "id": 6
-    },
-    {
-      "email": "maria12geneva@yahoo.com",
-      "password": "geneva",
-      "id": 7
-    },
-    {
-      "email": "admin@demo.com",
-      "password": "12345",
-      "id": 8
-    },
-    {
-      "email": "calebjohnson@gmail.com",
-      "password": "caleb",
-      "id": 9
-    },
-    {
-      "email": "jamesmaina@gmail.com",
-      "password": "maina",
-      "id": 10
-    },
-    {
-      "email": "antony123muriithi@gmail.com",
-      "password": "moreh",
-      "id": 11
-    },
-    {
-      "email": "doctor2@demo.com",
-      "password": "doc",
-      "id": 12
-    },
-    {
-      "email": "ludacris@gmail.com",
-      "password": "luda",
-      "id": 13
     }
   ]
 }
