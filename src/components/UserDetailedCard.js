@@ -16,11 +16,13 @@ function UserDetailedCard({ darkMode, setDarkMode, gitUser, setShowGitUser, show
     }
     const user = showGitUser.find(user => user.id === Number(id));
     useEffect(() => {
-        fetch(`${user.organizations_url}`)
-            .then(res => res.json())
-            .then(data => {
-                setOrgs(data)
-            })
+        if (user && user.organizations_url) {
+            fetch(`${user.organizations_url}`)
+                .then(res => res.json())
+                .then(data => {
+                    setOrgs(data)
+                })
+        }
     }, []);
 
     useEffect(() => {
