@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/github-pioneer-club/static/css/main.5d088f9e.css",
-    "main.js": "/github-pioneer-club/static/js/main.26feefab.js",
+    "main.js": "/github-pioneer-club/static/js/main.b218b737.js",
     "static/js/787.2a387654.chunk.js": "/github-pioneer-club/static/js/787.2a387654.chunk.js",
     "index.html": "/github-pioneer-club/index.html",
     "main.5d088f9e.css.map": "/github-pioneer-club/static/css/main.5d088f9e.css.map",
-    "main.26feefab.js.map": "/github-pioneer-club/static/js/main.26feefab.js.map",
+    "main.b218b737.js.map": "/github-pioneer-club/static/js/main.b218b737.js.map",
     "787.2a387654.chunk.js.map": "/github-pioneer-club/static/js/787.2a387654.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5d088f9e.css",
-    "static/js/main.26feefab.js"
+    "static/js/main.b218b737.js"
   ]
 }
