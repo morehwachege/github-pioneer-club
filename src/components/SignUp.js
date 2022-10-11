@@ -1,10 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Auth from './Auth';
 import { Link, useNavigate } from 'react-router-dom';
-import { UserContext } from '../contexts/UserContext';
 
-function SignUp({ darkMode, setDarkMode, setLoggedInUser }) {
-    const [isLoggedIn, setIsLoggedIn] = useContext(UserContext);
+function SignUp({ darkMode, setDarkMode }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [currentUsers, setCurrentUsers] = useState([]);
@@ -34,18 +32,13 @@ function SignUp({ darkMode, setDarkMode, setLoggedInUser }) {
                 body: JSON.stringify(postData)
             })
                 .then(res => res.json())
-                .then(data => {
-                    setIsLoggedIn(true)
-                    setLoggedInUser(data)
+                .then((data) => {
+                    console.log("Sign Up Success!");
+                    navigate("/login");
                 })
         }
         // TODO: set logged in as true, navigate to homepage, set delete
     }
-    useEffect(() => {
-        if (isLoggedIn) {
-            navigate("/")
-        }
-    }, [isLoggedIn])
     return (
         <>
             <Auth darkMode={darkMode} setDarkMode={setDarkMode} />

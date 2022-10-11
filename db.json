@@ -44,6 +44,16 @@
       "email": "antony123muriithi@gmail.com",
       "password": "moreh",
       "id": 11
+    },
+    {
+      "email": "doctor2@demo.com",
+      "password": "doc",
+      "id": 12
+    },
+    {
+      "email": "ludacris@gmail.com",
+      "password": "luda",
+      "id": 13
     }
   ]
 }
