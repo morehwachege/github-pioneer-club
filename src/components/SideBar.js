@@ -40,10 +40,9 @@ function SideBar({ darkMode, gitUser, setShowGitUser, setIsLoggedIn, loggedInUse
             <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
             </a>
             <ul className="nav nav-pills flex-column mb-auto">
-                {/* <li className=' d-fex justify-content-center align-items-center flex-column'>
-                    <img style={{}} src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Circle-icons-profile.svg" height={80} width={80} alt="profile thumbnail" className="img-thumbnail rounded" />
-                    <h6>Software Developer</h6>
-                </li> */}
+                <li className=' d-fex justify-content-center align-items-center flex-column'>
+                    <h6>{loggedInUser.email}</h6>
+                </li>
                 <li className='nav-item'>
                     <div className="input-group mb-3">
                         <input type="text" className="form-control"
