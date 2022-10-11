@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.5d088f9e.css",
-    "main.js": "/static/js/main.28da4717.js",
-    "static/js/787.2a387654.chunk.js": "/static/js/787.2a387654.chunk.js",
-    "index.html": "/index.html",
-    "main.5d088f9e.css.map": "/static/css/main.5d088f9e.css.map",
-    "main.28da4717.js.map": "/static/js/main.28da4717.js.map",
-    "787.2a387654.chunk.js.map": "/static/js/787.2a387654.chunk.js.map"
+    "main.css": "/github-pioneer-club/static/css/main.5d088f9e.css",
+    "main.js": "/github-pioneer-club/static/js/main.44f8a49e.js",
+    "static/js/787.2a387654.chunk.js": "/github-pioneer-club/static/js/787.2a387654.chunk.js",
+    "index.html": "/github-pioneer-club/index.html",
+    "main.5d088f9e.css.map": "/github-pioneer-club/static/css/main.5d088f9e.css.map",
+    "main.44f8a49e.js.map": "/github-pioneer-club/static/js/main.44f8a49e.js.map",
+    "787.2a387654.chunk.js.map": "/github-pioneer-club/static/js/787.2a387654.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5d088f9e.css",
-    "static/js/main.28da4717.js"
+    "static/js/main.44f8a49e.js"
   ]
 }
