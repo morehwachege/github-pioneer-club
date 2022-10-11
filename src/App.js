@@ -27,7 +27,7 @@ function App() {
   }, [])
 
   return (
-    <Router>
+    <Router basename='/github-pioneer-club' >
       <div className="App">
 
         <UserContext.Provider value={[isLoggedIn, setIsLoggedIn, setLoggedInUser]}>
