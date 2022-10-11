@@ -44,6 +44,11 @@
       "email": "vitalismaina@gmail.com",
       "password": "maina",
       "id": 11
+    },
+    {
+      "email": "jamesfranco@gmail.com",
+      "password": "franco",
+      "id": 12
     }
   ]
 }
