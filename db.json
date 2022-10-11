@@ -4,6 +4,11 @@
       "id": 1,
       "email": "jamescorden@gmail.com",
       "password": "hackme"
+    },
+    {
+      "email": "jamesmaina@gmail.com",
+      "password": "maina",
+      "id": 2
     }
   ]
 }

@@ -41,7 +41,7 @@ function SideBar({ darkMode, gitUser, setShowGitUser, setIsLoggedIn, loggedInUse
             </a>
             <ul className="nav nav-pills flex-column mb-auto">
                 <li className=' d-fex justify-content-center align-items-center flex-column'>
-                    <h6>{loggedInUser.email}</h6>
+                    <h6>{loggedInUser ? loggedInUser.email : "Welcome!"}</h6>
                 </li>
                 <li className='nav-item'>
                     <div className="input-group mb-3">
