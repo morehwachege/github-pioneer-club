@@ -8,7 +8,7 @@ Display some og GitHub's earliest users including the co-founders. Shows a detai
 [demo link](https://drive.google.com/file/d/1slNGwrLAROllRtEb0XBpdFaUUpoAnV3X/view)
 
 
-<video width="320" height="240" controls>
+<video width="420" height="300" controls>
   <source src="githubpioneer.webm" type="video/webm">
   <source src="githubpioneer.webm" type="video/ogg">
 Your browser does not support the video tag.
