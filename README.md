@@ -36,8 +36,8 @@ url - [server link](https://github-pioneer-json-server.herokuapp.com/users/)
   "users": [
     {
       "id": 1,
-      "email": "jamescorden@gmail.com",
-      "password": "hackme"
+      "email": "someemail@email.com",
+      "password": "somepassword22"
     }
   ]
 }
@@ -50,8 +50,8 @@ url - [server link](https://github-pioneer-json-server.herokuapp.com/users/)
 - Pushing to different navigations using the useNavigate hook.
 
 ### Default Credentials or Create Account
-- email - someonestolemypassword@email.com
-- password - dumbpass22
+- email - someemail@email.com
+- password - somepassword22
 
 
 
