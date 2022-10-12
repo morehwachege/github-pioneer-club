@@ -23,10 +23,26 @@ For support, email muriithigakuru@gmail.com or join our Slack channel.
 
 ## Tech Stack
 
-**Client:** React, Redux, Bootstrap 5
+**Client:** React, Redux, Bootstrap 5, Heroku, JSON server
 
 **Server:** GitHub API
 
+## Server
+url - [server link](https://github-pioneer-json-server.herokuapp.com/users/)
+
+```json
+
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "jamescorden@gmail.com",
+      "password": "hackme"
+    }
+  ]
+}
+
+```
 
 ## Lessons Learned
 
