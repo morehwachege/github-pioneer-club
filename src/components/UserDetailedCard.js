@@ -60,7 +60,6 @@ function UserDetailedCard({ darkMode, setDarkMode, gitUser, setShowGitUser, show
                                     <h3>Organizations</h3>
                                     <div className='container d-flex justify-content-center align-items-center flex-row flex-wrap'>
                                         {
-                                            // fetchOrgs(user.organisations_url)
                                             orgs ?
                                                 orgs.map(item => {
                                                     return (

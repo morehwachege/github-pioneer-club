@@ -14,7 +14,7 @@ function Login({ darkMode, setDarkMode, setLoggedInUser}) {
     function handleLogin(e) {
         e.preventDefault();
 
-        fetch("http://localhost:4000/users")
+        fetch("https://github-pioneer-json-server.herokuapp.com/users/")
             .then(res => res.json())
             .then(data => {
                 // returns undefined if no users found

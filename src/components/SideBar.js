@@ -21,7 +21,7 @@ function SideBar({ darkMode, gitUser, setShowGitUser, setIsLoggedIn, loggedInUse
 
     function handleDelete() {
         // set currently authenticated and groom to delete
-        fetch(`http://localhost:4000/users/${loggedInUser.id}`, {
+        fetch(`https://github-pioneer-json-server.herokuapp.com/users/${loggedInUser.id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

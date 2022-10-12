@@ -10,7 +10,7 @@ function SignUp({ darkMode, setDarkMode }) {
 
     function handleSignUp(e) {
         e.preventDefault();
-        fetch("http://localhost:4000/users")
+        fetch("https://github-pioneer-json-server.herokuapp.com/users/")
             .then(res => res.json())
             .then(data => {
                 setCurrentUsers(data)
@@ -23,7 +23,7 @@ function SignUp({ darkMode, setDarkMode }) {
         const filteredData = currentUsers.find(user => user.email === postData.email);
         if (!filteredData) {
             // only post if there is no such data in the server
-            fetch("http://localhost:4000/users", {
+            fetch("https://github-pioneer-json-server.herokuapp.com/users/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

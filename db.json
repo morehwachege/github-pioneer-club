@@ -9,6 +9,11 @@
       "email": "jamesmaina@gmail.com",
       "password": "maina",
       "id": 2
+    },
+    {
+      "email": "joejonas@gmail.com",
+      "password": "jonas",
+      "id": 3
     }
   ]
 }
