@@ -15,17 +15,14 @@ Your browser does not support the video tag.
 </video>
 
 
-## Support
-
-For support, email muriithigakuru@gmail.com or join our Slack channel.
 
 
 
 ## Tech Stack
 
-**Client:** React, Redux, Bootstrap 5, Heroku, JSON server
+**Client:** React, Redux, Bootstrap 5
 
-**Server:** GitHub API
+**Server:** GitHub API, Heroku, JSON server
 
 ## Server
 url - [server link](https://github-pioneer-json-server.herokuapp.com/users/)
@@ -59,6 +56,11 @@ url - [server link](https://github-pioneer-json-server.herokuapp.com/users/)
 ## 🔗 Links
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/muriithigakuru)
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/muriithi_gakuru)
+
+
+## Support
+
+For support, email muriithigakuru@gmail.com or join our Slack channel.
 
 
 ## 🚀 License
